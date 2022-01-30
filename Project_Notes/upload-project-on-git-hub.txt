@@ -1,0 +1,37 @@
+HOW WE CAN UPLOAD OUR LARAVEL PROJEC ON GIT HUB
+-------------------------------------------------------------
+
+
+1. goto github and create your account
+
+2. Now login your git hub account and Click on plus icon in right side or near profile 
+
+3.  Click on New Repository and Enter your Repository name(project name) and click on Create Repository button
+
+4.  Now copy Repository (project) path
+
+________________________________________________________________________________________________________________________
+
+
+
+FOLLOW BELLOW COMMANDS TO UPLOAD PROJECT ON GIT HUB
+_____________________________________________________________________________________
+=========== File Upload process =========
+1.  Now goto your project folder in your computer and press right click and Click n Git Bash Here option 
+    now an cmd window open then enter bellow commands
+
+--------------------------------------
+NOW TYPE BELLOW COMMANDS IN GIT BASH
+
+1.  git init
+2.  git add .
+3.  git commit -m "ecommerce" .
+4.  git remote add origin https://github.com/vkchangl10/laravel-ecommerce-project.git
+5.  git push -u origin master
+
+
+-------------- From Local Host Site Work ----------------
+git status
+git add
+git commit -m "modify" .
+git push -u origin master

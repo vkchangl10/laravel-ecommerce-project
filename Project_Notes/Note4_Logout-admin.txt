@@ -1,0 +1,31 @@
+1.  Admin Logout Button ko par jaakr route defile krenege 
+    project me admin Logout Button header me hai isliye header.blade.php   file me jaakr button par route define krenege
+    
+        Example:
+            <a class="dropdown-item" href=" {{ route('admin.logout') }} "><i class="ti-lock text-muted mr-2"></i> Logout</a>
+
+
+
+
+2.  ab web.php   route file me route declear krenege
+    Example:
+        
+        //Admin Logout Route
+        Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.logout');
+
+
+3.  AdminController.php    Controller file me ek destroy ka function hai jiske through admin Logout hota hai 
+    ye function jetstream package me hi aata hai 
+
+
+
+4.  AdminController.php   controller  file Logout Funcion code
+    Example:
+
+         public function destroy(Request $request): LogoutResponse
+            {
+                $this->guard->logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();
+                return app(LogoutResponse::class);
+            }

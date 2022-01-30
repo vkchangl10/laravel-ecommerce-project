@@ -1,0 +1,73 @@
+1.	open folder in cmd and type bellow command for install laravel      link- https://laravel.com/docs/.x#installation-via-composer
+	Example:
+		composer create-project laravel/laravel ecommerce    --(yha project name aayega ex: ecommerce)
+
+
+
+2.	Now open create project folder in cmd  now install laravel jetstream package       link: https://jetstream.laravel.com/2.x/installation.html
+	write bellow command for install jetstream
+	Example:
+		composer require laravel/jetstream
+
+
+
+3.	Now in same project folder install liveware package after install jetstream package         link: https://jetstream.laravel.com/2.x/installation.html
+
+	Example:
+		php artisan jetstream:install livewire
+
+
+
+4.	After install livewire now run npm install && npm run dev    command in project folder
+	
+	NOTE: ye command run karne se phhle hme apne system me Nodejs install krni pdegi 
+	NOTE: link for install Nodejs  =  https://nodejs.org/en/
+
+
+
+
+5.	npm install && npm run dev    install hone ke baad hum project k liye database create krenge 
+	Example:
+			suppose humne phpmyadmin me jaake ecommerce name se database create kiya hai 
+
+
+
+6.	ab database create krne k baad project me .env name se file open krenge or database ka name change krenege
+	Example: DB_DATABASE = ecommerce
+
+
+
+7.	ab project folder ko cmd me open krke niche wali command run krenege
+	Example:
+		php artisan migrate
+
+	NOTE: ye command run krne se database me automatic 4-5 tables create ho jaayegi or hume user panel create huwa milega
+
+______________________________________________________________________________________________________
+
+
+Enable Or Setup User Profile Change Option
+---------------------------------------------------------
+
+1.	Sabse phhle to hum project me Profile Photo Feature ko enable krenge 
+	Example:
+		goto config folder >> then open jetstream.php file and enable    Features::profilePhotos()    option in features 
+
+	feature ko uncomment krne k bad hme profile photo show ho jaayegi
+
+
+2.	ab .env file open kreneg or App_URL me ip localhost yaani projet ka ip dalenge 
+	Example:
+		APP_URL=http://127.0.0.1:8000
+
+3.	ab APP_URL   update krene k baad  niche wali command run kreneg 
+	Example:
+		php artisan storage:link    
+	
+	NOTE: ye command run krne se public folder k ander storage name se ek folder create ho jaayega or usme profile_photo name se folder create ho jaayega jha par profile ki photo save hogi
+
+
+
+______________________________________________________________________________________________________
+
+
